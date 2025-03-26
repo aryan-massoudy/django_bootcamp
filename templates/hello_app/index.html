@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="de">
 <head>
     <meta charset="UTF-8">
@@ -18,6 +19,12 @@
     
         <em>{{ insert_me }}</em>
 
+        <div >
+            <img class="img-thumbnail image-container w-50 h-50" src="{% static "images\person-311134_1280.webp" %}" alt="Uh oh img not found">
+        </div>
+    
+    
     </div>
+
 </body>
 </html>
