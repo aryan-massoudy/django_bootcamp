@@ -16,15 +16,30 @@
 
     <div class="container">
     
-        <h1>Hello this come from index.html</h1>
-    
-        <em>{{ insert_me }}</em>
+        <h1>Hi Welcome to the First App Page</h1>
+        <h2>Here are some records of pages visited:</h2>
+        
+        <div>
+            {% if access_records %}
+            <table class="table">
+                <thead>
+                    <th>Website Name</th>
+                    <th>Date Accessed</th>
+                </thead>
 
-        <div >
-            <img class="img-thumbnail image-container w-50 h-50" src="{% static "images\person-311134_1280.webp" %}" alt="Uh oh img not found">
+                {% for item in access_records %}
+                <tr>
+                    <td>{{ item.name}}</td>
+                    <td>{{ item.date}}</td>
+                </tr>
+                {% endfor %}
+
+            </table>
+            {% else %}
+            <p>No Access Data Found.</p>
+            {% endif %}
         </div>
-    
-    
+
     </div>
 
 </body>
